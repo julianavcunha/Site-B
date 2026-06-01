@@ -2,23 +2,18 @@
 
 /* SECTION: Design tokens */
 :root {
-  /* Fonts */
+  
+    /* Fonts */
   --font-display: "Chango", cursive;
   --font-heading: "Lilita One", cursive;
   --font-body: "Roboto Condensed", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Colors - playful pop palette */
-  --color-bg: #f5f5f5;
-  --color-surface: #ffffff;
-  --color-surface-alt: #ffffff;
-  --color-text: #111111;
-  --color-text-muted: #666666;
-  --color-header-bg: #111111;
-  --color-header-text: #f5f5f5;
-  --color-accent: #111111;
-  --color-accent-soft: #e5e5e5;
-  --color-border-subtle: rgba(41, 18, 31, 0.08);
+    
 
+    
+
+  
+    
   /* Shadows & radius */
   --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.12);
   --radius-lg: 18px;
@@ -39,17 +34,12 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: var(--font-body);
-  background: var(--color-bg);
-  color: var(--color-text);
-  min-height: 100vh;
-}
+
 
 /* SECTION: Header */
 .site-header {
-  background-color: var(--color-header-bg);
-  border-bottom: 1px solid var(--color-header-text);
+  background-color: #0D3B66;
+  border-bottom: 1px solid #F4D35E;
 }
 
 .site-header-inner {
@@ -72,7 +62,7 @@ body {
   font-family: var(--font-display);
   font-size: clamp(4rem, 10vw, 6rem);
   letter-spacing: 6px;
-  color: var(--color-header-text);
+  color: #F4D35E;
   transform-origin: left center;
   transition: transform 0.2s ease-out;
 }
@@ -103,7 +93,7 @@ body {
   z-index: 1000;
   display: flex;
   align-items: center;
-  background: var(--color-header-bg);
+  background: #0D3B66;
   min-height: 54px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.18);
   padding: 0 16px;
@@ -164,7 +154,7 @@ body {
   gap: 4px;
   padding: 0 17px;
   height: 54px;
-  color: var(--color-header-text);
+  color: #F4D35E;
   font-family: var(--font-heading);
   font-size: 1.25rem;
   text-decoration: none;
@@ -173,8 +163,8 @@ body {
 
 .gen-nav > ul > li > a:hover,
 .gen-nav > ul > li:hover > a {
-  background: var(--color-header-text);
-  color: var(--color-header-bg);
+  background: #F4D35E;
+  color: #0D3B66;
 }
 
 .gen-arrow {
@@ -187,7 +177,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background: var(--color-header-bg);
+  background: #0D3B66;
   min-width: 170px;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
@@ -201,15 +191,15 @@ body {
 .gen-nav > ul > li > ul > li > a {
   display: block;
   padding: 10px 18px;
-  color: var(--color-header-text);
+  color: #F4D35E;
   font-size: 1rem;
   text-decoration: none;
   transition: background 0.15s, color 0.15s;
 }
 
 .gen-nav > ul > li > ul > li > a:hover {
-  background: var(--color-header-text);
-  color: var(--color-header-bg);
+  background: #F4D35E;
+  color: #0D3B66;
 }
 
 /* Responsive nav */
@@ -225,7 +215,7 @@ body {
     left: 0;
     right: 0;
     flex-direction: column;
-    background: var(--color-header-bg);
+    background: var(--background-navbar);
     border-radius: 0 0 10px 10px;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
     padding: 8px 0;
@@ -277,7 +267,7 @@ body {
 
 .hero-text p {
   font-size: 1rem;
-  color: var(--color-text-muted);
+  color: var(--text-main);
 }
 
 /* Product section */
@@ -310,7 +300,7 @@ body {
 /* SECTION: Product grid using CSS Grid */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
   gap: 20px;
 }
 
@@ -360,7 +350,6 @@ body {
   font-size: 0.9rem;
   color: var(--color-text-muted);
 }
-
 .product-price {
   font-weight: 700;
   margin-top: 6px;
@@ -372,8 +361,8 @@ body {
   padding: 8px 14px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--color-border-subtle);
-  background: var(--color-surface);
-  color: var(--color-text);
+  background: #0D3B66;
+  color: #F4D35E;
   font-family: inherit;
   font-size: 0.95rem;
   cursor: pointer;
@@ -382,13 +371,16 @@ body {
 }
 
 .product-button:hover {
-  background: var(--color-accent-soft);
-  transform: translateY(-1px);
+  background: #F4D35E;
+  font-family: inherit;
+  color:#0D3B66;
+  font-weight: 600;
+  transform: translateY(-1px); 
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .product-button:focus-visible {
-  outline: 3px solid #ffffff;
+  outline: 3px solid #F4D35E;
   outline-offset: 2px;
   box-shadow: 0 0 0 3px rgba(255, 111, 181, 0.6);
 }
