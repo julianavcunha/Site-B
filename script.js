@@ -15,6 +15,22 @@ if (ham && nav && menu) {
       menu.classList.remove("open");
       nav.classList.remove("mobile-open");
     }
+
+    // SECTION: RESTOK scroll shrink effect
+    const restokLogo = document.getElementById("restok-logo");
+
+    if (restokLogo) {
+      const maxScale = 1; // initial size
+      const minScale = 0.5; // size after scrolling down
+      const maxScroll = 300; // px over which the effect happens
+
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const progress = Math.min(scrollY / maxScroll, 1);
+        const scale = maxScale - (maxScale - minScale) * progress;
+        restokLogo.style.transform = `scale(${scale})`;
+      });
+    }
   });
 
   // Mobile collapsed submenu toggle

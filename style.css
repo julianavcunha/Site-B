@@ -8,15 +8,15 @@
   --font-body: "Roboto Condensed", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Colors - playful pop palette */
-  --color-bg: #fff7fd;
-  --color-surface: #ffe9fb;
+  --color-bg: #f5f5f5;
+  --color-surface: #ffffff;
   --color-surface-alt: #ffffff;
-  --color-text: #29121f;
-  --color-text-muted: #6b425b;
-  --color-header-bg: #da70d6;
-  --color-header-text: #ffd8b5;
-  --color-accent: #ff6fb5;
-  --color-accent-soft: #ffe1f0;
+  --color-text: #111111;
+  --color-text-muted: #666666;
+  --color-header-bg: #111111;
+  --color-header-text: #f5f5f5;
+  --color-accent: #111111;
+  --color-accent-soft: #e5e5e5;
   --color-border-subtle: rgba(41, 18, 31, 0.08);
 
   /* Shadows & radius */
@@ -41,41 +41,82 @@
 
 body {
   font-family: var(--font-body);
-  background: radial-gradient(circle at top left, #ffe0ff 0, #fff7fd 45%, #ffffff 100%);
+  background: var(--color-bg);
   color: var(--color-text);
   min-height: 100vh;
 }
 
 /* SECTION: Header */
+.site-header {
+  background-color: var(--color-header-bg);
+  border-bottom: 1px solid var(--color-header-text);
+}
+
+.site-header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
 .pagetitle {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 32px 16px 28px;
-  background-color: var(--color-header-bg);
-  border-bottom: 2px solid var(--color-header-text);
+  justify-content: center;
 }
 
 .pagetitle h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 4vw, 3.4rem);
-  letter-spacing: 4px;
+  font-size: clamp(4rem, 10vw, 6rem);
+  letter-spacing: 6px;
   color: var(--color-header-text);
+  transform-origin: left center;
+  transition: transform 0.2s ease-out;
+}
+
+/* Center the big RESTOK vertically on first screen */
+.site-header {
+  display: flex;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.site-header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 /* Generated navigation (kept from user, lightly tuned to tokens) */
 .gen-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   background: var(--color-header-bg);
   min-height: 54px;
-  border-bottom: 1px solid var(--color-header-text);
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.18);
   padding: 0 16px;
-  position: sticky;
-  top: 0;
-  z-index: 20;
   flex-wrap: wrap;
+}
+
+/* empurra o conteúdo pra baixo da navbar fixa */
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  padding-top: 60px;
 }
 
 .gen-nav ul {
@@ -244,6 +285,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  background: var(--color-bg);
+  padding: 40px 20px 56px;
+}
+
+/* stretch background to full viewport width on very small screens */
+@media (max-width: 480px) {
+  .product-section {
+    margin-inline: -16px;
+    padding-inline: 16px;
+  }
 }
 
 .product-header h2 {
@@ -267,7 +318,7 @@ body {
   background: var(--color-surface-alt);
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border-subtle);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -275,34 +326,22 @@ body {
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
-  border-color: rgba(255, 111, 181, 0.55);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  border-color: rgba(0, 0, 0, 0.35);
 }
 
 .product-image {
   height: 180px;
-  background: linear-gradient(135deg, #ffc8dd, #ffafcc);
+  background: #e5e5e5;
 }
 
-.product-image--pink {
-  background: linear-gradient(135deg, #ffc6ff, #ff70a6);
-}
-
-.product-image--green {
-  background: linear-gradient(135deg, #b9fbc0, #70e000);
-}
-
-.product-image--yellow {
-  background: linear-gradient(135deg, #fff3b0, #ffdd00);
-}
-
-.product-image--blue {
-  background: linear-gradient(135deg, #a2d2ff, #4361ee);
-}
-
+.product-image--pink,
+.product-image--green,
+.product-image--yellow,
+.product-image--blue,
 .product-image--purple {
-  background: linear-gradient(135deg, #cdb4db, #9b5de5);
+  background: #e5e5e5;
 }
 
 .product-info {
@@ -332,9 +371,9 @@ body {
   align-self: flex-start;
   padding: 8px 14px;
   border-radius: var(--radius-pill);
-  border: none;
-  background: var(--color-accent);
-  color: #fff;
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-surface);
+  color: var(--color-text);
   font-family: inherit;
   font-size: 0.95rem;
   cursor: pointer;
@@ -343,9 +382,9 @@ body {
 }
 
 .product-button:hover {
-  background: #ff4f9d;
+  background: var(--color-accent-soft);
   transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(255, 79, 157, 0.55);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .product-button:focus-visible {
