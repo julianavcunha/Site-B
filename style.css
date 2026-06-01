@@ -3,29 +3,32 @@
 /* SECTION: Design tokens */
 :root {
   
-    /* Fonts */
-  --font-display: "Chango", cursive;
-  --font-heading: "Lilita One", cursive;
-  --font-body: "Roboto Condensed", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-
+    /* Colors */
+    --color-primary: #0D3B66;
+    --color-secondary: #F4D35E;
+    --color-background: #FAF0CA;
+    --color-text: #0D3B66;
+    --color-text-muted: #0D3B66;
+    --color-border: #0D3B66;
+    --color-border-subtle: rgba(0, 0, 0, 0.15);
+    
+    /* Typography */
+    --font-family-heading: 'Chango', cursive;
+    --font-family-body: 'Lilita One', cursive;
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    
+    /* Border radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
     
 
-    
-
-  
-    
-  /* Shadows & radius */
-  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.12);
-  --radius-lg: 18px;
-  --radius-md: 14px;
-  --radius-pill: 999px;
-
-  /* Spacing */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
 }
 
 * {
@@ -59,7 +62,7 @@
 }
 
 .pagetitle h1 {
-  font-family: var(--font-display);
+  font-family: 'Chango', cursive;
   font-size: clamp(4rem, 10vw, 6rem);
   letter-spacing: 6px;
   color: #F4D35E;
@@ -102,9 +105,9 @@
 
 /* empurra o conteúdo pra baixo da navbar fixa */
 body {
-  font-family: var(--font-body);
-  background: var(--color-bg);
-  color: var(--color-text);
+  font-family: 'Lilita One', cursive;
+  background: #FAF0CA;
+  color: #0D3B66;
   min-height: 100vh;
   padding-top: 60px;
 }
@@ -155,7 +158,7 @@ body {
   padding: 0 17px;
   height: 54px;
   color: #F4D35E;
-  font-family: var(--font-heading);
+  font-family: 'Lilita One', cursive;
   font-size: 1.25rem;
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
@@ -215,7 +218,7 @@ body {
     left: 0;
     right: 0;
     flex-direction: column;
-    background: var(--background-navbar);
+    background: #0D3B66;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
     padding: 8px 0;
@@ -250,24 +253,24 @@ body {
 
 /* Hero intro */
 .hero {
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
+  background: #faf0ca;
+  border-radius: 18px;
   padding: 24px 20px 28px;
-  border: 1px solid var(--color-border-subtle);
-  box-shadow: var(--shadow-soft);
+  border: 1px solid #0D3B66;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   margin-bottom: 40px;
 }
 
 .hero-text h2 {
-  font-family: var(--font-heading);
+  font-family: 'Lilita One', cursive;
   font-size: clamp(1.6rem, 3vw, 2.1rem);
-  letter-spacing: 1px;
+  letter-spacing: 4px;
   margin-bottom: 10px;
 }
 
 .hero-text p {
   font-size: 1rem;
-  color: var(--text-main);
+  color: #0D3B66;
 }
 
 /* Product section */
@@ -275,7 +278,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  background: var(--color-bg);
+  background: #FAF0CA;
   padding: 40px 20px 56px;
 }
 
@@ -288,13 +291,13 @@ body {
 }
 
 .product-header h2 {
-  font-family: var(--font-heading);
+  font-family: 'Lilita One', cursive;
   font-size: 1.6rem;
   margin-bottom: 4px;
 }
 
 .product-header p {
-  color: var(--color-text-muted);
+  color: #0D3B66;
 }
 
 /* SECTION: Product grid using CSS Grid */
@@ -305,9 +308,9 @@ body {
 }
 
 .product-card {
-  background: var(--color-surface-alt);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border-subtle);
+  background: #FAF0CA;
+  border-radius: 14px;
+  border: 1px solid #0D3B66;
   box-shadow: none;
   overflow: hidden;
   display: flex;
@@ -323,7 +326,7 @@ body {
 
 .product-image {
   height: 180px;
-  background: #e5e5e5;
+  background: #faf0ca;
 }
 
 .product-image--pink,
@@ -331,7 +334,7 @@ body {
 .product-image--yellow,
 .product-image--blue,
 .product-image--purple {
-  background: #e5e5e5;
+  background: #faf0ca;
 }
 
 .product-info {
@@ -348,7 +351,7 @@ body {
 
 .product-size {
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: #0D3B66;
 }
 .product-price {
   font-weight: 700;
@@ -359,15 +362,15 @@ body {
   margin-top: 10px;
   align-self: flex-start;
   padding: 8px 14px;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--color-border-subtle);
+  border-radius: 999px;
+  border: 1px solid #0D3B66;
   background: #0D3B66;
   color: #F4D35E;
   font-family: inherit;
   font-size: 0.95rem;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-  box-shadow: 0 6px 14px rgba(255, 111, 181, 0.45);
+  
 }
 
 .product-button:hover {
@@ -382,7 +385,7 @@ body {
 .product-button:focus-visible {
   outline: 3px solid #F4D35E;
   outline-offset: 2px;
-  box-shadow: 0 0 0 3px rgba(255, 111, 181, 0.6);
+  
 }
 
 /* Small screens */
@@ -399,3 +402,5 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+

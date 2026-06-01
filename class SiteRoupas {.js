@@ -1,8 +1,9 @@
 class SiteRoupas {
-    constructor(tipo, tamanho, preço) {
+    constructor(tipo, tamanho, preço, marca) {
         this._tipo = tipo;
         this._tamanho = tamanho;
         this._preço = preço;
+        this._marca = marca;
     }
 
     get tipo() {
@@ -14,11 +15,17 @@ class SiteRoupas {
     get preço() {
         return this._preço;
     }
+    get marca() {
+        if (this._marca === true) {
+            return this._marca;
+        }
+            return "Marca não informada";
+    }
 }
 
 class Blusas extends SiteRoupas {
-    constructor(tipo, tamanho, preço, cor) {
-        super(tipo, tamanho, preço);
+    constructor(tipo, tamanho, preço, cor, marca) {
+        super(tipo, tamanho, preço, marca);
         this._cor = cor;
     }
 
@@ -29,8 +36,8 @@ class Blusas extends SiteRoupas {
 
 
 class Calças extends SiteRoupas {
-    constructor(tipo, tamanho, preço, material) {
-        super(tipo, tamanho, preço);
+    constructor(tipo, tamanho, preço, material, marca) {
+        super(tipo, tamanho, preço, marca);
         this._material = material;
     }
 
@@ -40,8 +47,8 @@ class Calças extends SiteRoupas {
 }
 
 class Vestidos extends SiteRoupas {
-    constructor(tipo, tamanho, preço, estilo) {
-        super(tipo, tamanho, preço);
+    constructor(tipo, tamanho, preço, estilo, marca) {
+        super(tipo, tamanho, preço, marca);
         this._estilo = estilo;
     }
 
@@ -49,3 +56,9 @@ class Vestidos extends SiteRoupas {
         return this._estilo;
     }
 }
+
+const calça1 = new Calças("Calça Jeans Preta", "46", 70, "Jeans", "C&A");
+
+
+
+export default SiteRoupas;
