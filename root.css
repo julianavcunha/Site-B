@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+:root {
+  
+    /* Colors */
+    --color-primary: #0D3B66;
+    --color-secondary: #F4D35E;
+    --color-background: #FAF0CA;
+    --color-text: #0D3B66;
+    --color-text-muted: #0D3B66;
+    --color-border: #0D3B66;
+    --color-border-subtle: rgba(0, 0, 0, 0.15);
+    
+    /* Typography */
+    --font-family-heading: 'Chango', cursive;
+    --font-family-body: 'Lilita One', cursive;
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    
+    /* Border radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    
+
+}
