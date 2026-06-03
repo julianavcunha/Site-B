@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+.site-footer {
+    background-color: #0D3B66;
+    border-bottom: 1 px solid #F4D35E;
+    
+}
+
+.site-footer-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 20px 20px 0;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 16px;
+}
+
+#burst-8 {
+      background: red;
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      text-align: center;
+      transform: rotate(20deg);
+    }
+    
+#burst-8:before {
+      content: "Contato";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 120px;
+      width: 120px;
+      background: red;
+      transform: rotate(135deg);
+    }
+
+#burst-8:after {
+      content: "Contato";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 120px;
+      width: 120px;
+      background: red;
+      transform: rotate(270deg);
+    }
+
+
+    
+
+#burst-8 .h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 16px;
+    }
+
+
+
