@@ -1,9 +1,10 @@
 class SiteRoupas {
-    constructor(tipo, tamanho, preço, marca) {
+    constructor(tipo, tamanho, preço, marca, imagens) {
         this._tipo = tipo;
         this._tamanho = tamanho;
         this._preço = preço;
         this._marca = marca;
+        this._imagens = imagens;
     }
 
     get tipo() {
@@ -21,11 +22,14 @@ class SiteRoupas {
         }
             return "Marca não informada";
     }
+    get imagens() {
+        return this._imagens;
+    }
 }
 
 class Blusas extends SiteRoupas {
-    constructor(tipo, tamanho, preço, cor, marca) {
-        super(tipo, tamanho, preço, marca);
+    constructor(tipo, tamanho, preço, cor, marca, imagens) {
+        super(tipo, tamanho, preço, marca, imagens);
         this._cor = cor;
     }
 
@@ -36,8 +40,8 @@ class Blusas extends SiteRoupas {
 
 
 class Calças extends SiteRoupas {
-    constructor(tipo, tamanho, preço, material, marca) {
-        super(tipo, tamanho, preço, marca);
+    constructor(tipo, tamanho, preço, material, marca, imagens) {
+        super(tipo, tamanho, preço, marca, imagens);
         this._material = material;
     }
 
@@ -47,8 +51,8 @@ class Calças extends SiteRoupas {
 }
 
 class Vestidos extends SiteRoupas {
-    constructor(tipo, tamanho, preço, estilo, marca) {
-        super(tipo, tamanho, preço, marca);
+    constructor(tipo, tamanho, preço, estilo, marca, imagens) {
+        super(tipo, tamanho, preço, marca, imagens);
         this._estilo = estilo;
     }
 
@@ -57,7 +61,7 @@ class Vestidos extends SiteRoupas {
     }
 }
 
-const calça1 = new Calças("Calça Jeans Preta", "46", 70, "Jeans", "C&A");
+const calça1 = new Calças("Calça Jeans Preta", "46", 70, "Jeans", "C&A", ["imagem1.jpg", "imagem2.jpg"]);
 
 
 
