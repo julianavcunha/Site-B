@@ -1,5 +1,6 @@
 import React from './react';
 import { handleSearch } from './HandleSearch';
+import {SiteRoupas} from './class SiteRoupas ';
 
 function getProduct(handleSearch) {
     return <article className="product-card">
@@ -10,3 +11,5 @@ function getProduct(handleSearch) {
         <p>Marca: {handleSearch().marca}</p>
     </article>;
 }
+
+export { getProduct };
