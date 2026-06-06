@@ -20,6 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .pagetitle h1 {
@@ -27,16 +28,12 @@
   font-size: clamp(4rem, 10vw, 6rem);
   letter-spacing: 6px;
   color: #F4D35E;
-  transform-origin: left center;
-  transition: transform 0.2s ease-out;
+  align-self: flex-start;
+
+  
 }
 
-/* Center the big RESTOK vertically on first screen */
-.site-header {
-  display: flex;
-  align-items: center;
-  min-height: 60vh;
-}
+
 
 .site-header-inner {
   max-width: 1120px;
