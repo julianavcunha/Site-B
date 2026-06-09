@@ -29,6 +29,53 @@
   color: #0D3B66;
 }
 
+#search-input {
+  border: 2px solid #0D3B66;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 8px 32px 8px 8px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  color: #ffffff;
+  background: #0D3B66;
+  border-radius: 8px;
+  border: none;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon svg {
+  width: 11px;
+  height: 11px;
+  fill: #F4D35E;
+}
+
+.btn:hover {
+  background: #F4D35E;
+  color: #0D3B66;
+}
+
+.btn:hover { animation: pulse-grow var(--hover-duration, 0.5s) ease; }
+@keyframes pulse-grow { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+
 /* Product section */
 .product-section {
   display: flex;
