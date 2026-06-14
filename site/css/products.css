@@ -7,6 +7,21 @@
   padding: 32px 20px 56px;
 }
 
+/* SECTION: About RSTK */
+
+.store-about {
+  display: flex;
+  padding: 30px 50px; 
+  background-color: rgba(244, 211, 94, 0.5);
+  
+  font-family: "Lilita One", cursive;
+  color: #0D3B66;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+  
+}
+
 /* Hero intro */
 .hero {
   background: #faf0ca;
@@ -21,17 +36,13 @@
   font-family: 'Lilita One', cursive;
   font-size: clamp(1.6rem, 3vw, 2.1rem);
   letter-spacing: 4px;
-  line-height: 10px; 
+  line-height: 2rem; 
   margin-bottom: 10px;
   background-image: linear-gradient(0deg, #F6BB2680 0.5em, transparent 0.5em);
+  
 }
 
 
-.hero-text p {
-  font-size: 1.5rem;
-  margin-bottom: 10px; 
-  color: #0D3B66;
-}
 
 #search-input {
   border: 2px solid #0D3B66;
@@ -75,9 +86,9 @@
 .btn:hover {
   background: #F4D35E;
   color: #0D3B66;
+  animation: pulse-grow var(--hover-duration, 0.5s) ease;
 }
 
-.btn:hover { animation: pulse-grow var(--hover-duration, 0.5s) ease; }
 @keyframes pulse-grow { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
 
 /* Product section */
@@ -99,7 +110,7 @@
 
 .product-header h2 {
   font-family: 'Lilita One', cursive;
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   margin-bottom: 4px;
 }
 
@@ -183,7 +194,7 @@
 .product-button:hover {
   background: #F4D35E;
   font-family: inherit;
-  color:#0D3B66;
+  color: #0D3B66;
   font-weight: 600;
   transform: translateY(-1px); 
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);

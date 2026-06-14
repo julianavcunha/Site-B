@@ -4,61 +4,64 @@
 .site-header {
   background-color: #0D3B66;
   border-bottom: 1px solid #F4D35E;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .site-header-inner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 20px 20px 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  flex-direction: row;
+  gap: 0;
+  position: static; 
+  height: auto; 
+  padding: 0;
+  align-items: flex-start;
 }
 
 .pagetitle {
   display: flex;
   align-items: center;
-  justify-content: center;
-  
+  justify-content: flex-start;
+  flex: 0;
+  padding: 0;
+  margin-left: 0;
+  margin-top: 10px;
 }
 
 .pagetitle h1 {
   font-family: 'Chango', cursive;
-  font-size: clamp(4rem, 10vw, 6rem);
+  font-size: 60px;
   letter-spacing: 6px;
   color: #F4D35E;
-  align-self: flex-start;
-
-  
+  line-height: 1;
+  white-space: nowrap;
 }
 
-
-
-.site-header-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+.store-about {
+  display: none;
 }
 
 /* Generated navigation (kept from user, lightly tuned to tokens) */
 .gen-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+  position: static;
   display: flex;
   align-items: center;
   background: #0D3B66;
   min-height: 54px;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.18);
+  box-shadow: none;
   padding: 0 16px;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 /* empurra o conteúdo pra baixo da navbar fixa */
@@ -67,7 +70,7 @@ body {
   background: #FAF0CA;
   color: #0D3B66;
   min-height: 100vh;
-  padding-top: 60px;
+  padding-top: 120px;
 }
 
 .gen-nav ul {
