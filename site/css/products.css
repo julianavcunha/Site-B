@@ -21,11 +21,15 @@
   font-family: 'Lilita One', cursive;
   font-size: clamp(1.6rem, 3vw, 2.1rem);
   letter-spacing: 4px;
+  line-height: 10px; 
   margin-bottom: 10px;
+  background-image: linear-gradient(0deg, #F6BB2680 0.5em, transparent 0.5em);
 }
 
+
 .hero-text p {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 10px; 
   color: #0D3B66;
 }
 

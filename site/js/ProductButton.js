@@ -1,1 +1,0 @@
-const getDetails = document.getElementByClassName("product-button");
