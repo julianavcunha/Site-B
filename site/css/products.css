@@ -90,7 +90,6 @@ ol, li {
 
 .carousel {
   position: relative;
-  padding-top: 0;
   filter: none;
   perspective: none;
   width: 100vw;
@@ -280,9 +279,10 @@ ol, li {
 .hero-text h2 {
   font-family: 'Lilita One', cursive;
   font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: #0D3B66;
   letter-spacing: 4px;
-  line-height: 2rem; 
-  margin-bottom: 10px;
+  line-height: 1rem; 
+  margin-bottom: 5px;
   background-image: linear-gradient(0deg, #F6BB2680 0.5em, transparent 0.5em);
   
 }
@@ -309,7 +309,7 @@ ol, li {
 .product-header h2 {
   font-family: 'Lilita One', cursive;
   font-size: 2.4rem;
-  margin-bottom: 24px;
+  margin-bottom: 6-px;
   padding: 40px 20px 0 20px;
 }
 
