@@ -1,26 +1,50 @@
 @charset "UTF-8";
 
+/* SECTION: About RSTK */
+
+.store-about {
+  display: flex;
+  padding: 20px;
+  background-color: rgba(244, 211, 94, 0.5);
+  font-family: "Lilita One", cursive;
+  color: #0D3B66;
+  font-size: 18px;
+  font-weight: 200;
+  text-align: justify;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-left: calc(50vw - 50% + 20px);
+  padding-right: calc(50vw - 50% + 20px);
+  line-height: 1.6;
+}
+
 .site-footer {
     background-color: #0D3B66;
-    border-bottom: 1 px solid #F4D35E;
-    
+    border-bottom: 1px solid #F4D35E;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+    margin-bottom: 0;
 }
 
 .site-footer-inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 20px 20px 0;
-    height: 300px;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    gap: 16px;
+    padding: 15px 20px;
+    background-color: #0D3B66;
+    font-family: 'Lilita One', cursive;
+    font-size: 16px; 
+    text-align: justify;
+    line-height: 1.6;
 }
 
 .site-footer-inner h2 {
     color: #F4D35E;
     font-size: 45px;
     margin-bottom: 8px;
+    align-items: left;
+    margin: 0;
 }
 
 .site-footer-inner p {

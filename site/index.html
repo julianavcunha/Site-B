@@ -35,12 +35,7 @@
           <h1 id="restok-logo">RESTOK</h1>
         </section>
 
-        <!--<section id="about" class="store-about" aria-label="descricao-loja">
-          <p>A RESTOK nasceu com o propósito de ser uma galeria para as roupas que estavam precisando de um novo lar. 
-            A dona desse site (eu, prazer!), Médica Veterinária e aventureira na área de programação, criou ele do zero com dois objetivos principais: 
-            vender peças pouco usadas, pra novos donos que dessem mais amor a elas, e praticar minhas habilidades de Desenvolvimento Web. Com essa apresentação rapidinha, só resta dizer:
-            entra, fica à vontade, a casa é sua! &#9825; </p>
-        </section>-->
+        
       </div>
 
       <nav class="gen-nav" id="gen-nav">
@@ -57,11 +52,14 @@
           <li><a href="#/index.html/contato">Contato</a></li>
         </ul>
       </nav>
+      <p>Procurando algo específico? 
+        <input id="search-input" type='text' placeholder='Buscar:' inputmode="latin" /><button class="btn _pulse-grow">
+        <span class="btn-icon"><svg width="11" height="11" fill="#F4D35E" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></span>
+        </button></p>
+        
     </header>
 
-     
-
-    <!-- SECTION: Product Grid -->
+    <!-- SECTION: Product Carousel -->
     <section
       id="produtos"
       class="product-section"
@@ -69,105 +67,86 @@
     >
       <header class="product-header">
         <h2> &#9825; Novidades &#9825;</h2></header>
-        
-        <!-- SECTION: Searching
-
-        <p>Está procurando por algo específico? Digite o nome do produto na seção abaixo:</p>
-        <div class="search"><input id="search-input" type='text' placeholder='Nome ou palavra-chave:' inputmode="latin" /><button class="btn _pulse-grow">
-        <span class="btn-icon"><svg width="11" height="11" fill="#F4D35E" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></span>
-        </button></div>
-      -->
-
-      <div class="product-grid">
-        <!-- Exemplo de card de produto -->
-        <article class="product-card">
-          <div class="product-image" aria-hidden="true"></div>
-          <div class="product-info">
-            <h3 class="product-title">Jaqueta jeans oversized</h3>
-            <p class="product-size">Tamanho M</p>
-            <p class="product-price">R$ 89,90</p>
-            <button class="product-button" type="button">Ver detalhes</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div
-            class="product-image product-image--pink"
-            aria-hidden="true"
-          ></div>
-          <div class="product-info">
-            <h3 class="product-title">Vestido midi floral</h3>
-            <p class="product-size">Tamanho P</p>
-            <p class="product-price">R$ 79,90</p>
-            <button class="product-button" type="button">Ver detalhes</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div
-            class="product-image product-image--green"
-            aria-hidden="true"
-          ></div>
-          <div class="product-info">
-            <h3 class="product-title">Calça wide leg</h3>
-            <p class="product-size">Tamanho 40</p>
-            <p class="product-price">R$ 69,90</p>
-            <button class="product-button" type="button">Ver detalhes</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div
-            class="product-image product-image--yellow"
-            aria-hidden="true"
-          ></div>
-          <div class="product-info">
-            <h3 class="product-title">Camiseta básica cropped</h3>
-            <p class="product-size">Tamanho G</p>
-            <p class="product-price">R$ 39,90</p>
-            <button class="product-button" type="button">Ver detalhes</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div
-            class="product-image product-image--blue"
-            aria-hidden="true"
-          ></div>
-          <div class="product-info">
-            <h3 class="product-title">Saia plissada</h3>
-            <p class="product-size">Tamanho M</p>
-            <p class="product-price">R$ 59,90</p>
-            <button class="product-button" type="button">Ver detalhes</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div
-            class="product-image product-image--purple"
-            aria-hidden="true"
-          ></div>
-          <div class="product-info">
-            <h3 class="product-title">Blazer de alfaiataria</h3>
-            <p class="product-size">Tamanho 42</p>
-            <p class="product-price">R$ 119,90</p>
-            <button class="product-button" type="button">Ver detalhes</button>
-          </div>
-        </article>
-      </div>
-    </section>
-    
-      </div>
-    </section>
-  </body>
-  <footer id="contato" class="site-footer">
-    <div class="site-footer-inner">
       
-      <h2>Contato</h2> 
-      <p>
-        Para dúvidas, sugestões ou parcerias, entre em contato conosco através do
-        email: <a href="mailto:contato@rstk.com.br">contato@rstk.com.br</a>
-      </p>
-    </div>
-  </footer>
+      <div class="carousel" aria-label="Gallery">
+        <div class="carousel__viewport">
+          <div class="carousel__slide">
+            <div class="carousel__item">
+              <div class="carousel__product-image" aria-hidden="true"></div>
+              <h3>Jaqueta jeans oversized</h3>
+              <p class="carousel__size">Tamanho M</p>
+              <p class="carousel__price">R$ 89,90</p>
+              <button class="carousel__btn">Ver detalhes</button>
+            </div>
+          </div>
+          <div class="carousel__slide">
+            <div class="carousel__item">
+              <div class="carousel__product-image carousel__product-image--pink" aria-hidden="true"></div>
+              <h3>Vestido midi floral</h3>
+              <p class="carousel__size">Tamanho P</p>
+              <p class="carousel__price">R$ 79,90</p>
+              <button class="carousel__btn">Ver detalhes</button>
+            </div>
+          </div>
+          <div class="carousel__slide">
+            <div class="carousel__item">
+              <div class="carousel__product-image carousel__product-image--green" aria-hidden="true"></div>
+              <h3>Calça wide leg</h3>
+              <p class="carousel__size">Tamanho 40</p>
+              <p class="carousel__price">R$ 69,90</p>
+              <button class="carousel__btn">Ver detalhes</button>
+            </div>
+          </div>
+          <div class="carousel__slide">
+            <div class="carousel__item">
+              <div class="carousel__product-image carousel__product-image--yellow" aria-hidden="true"></div>
+              <h3>Camiseta básica cropped</h3>
+              <p class="carousel__size">Tamanho G</p>
+              <p class="carousel__price">R$ 39,90</p>
+              <button class="carousel__btn">Ver detalhes</button>
+            </div>
+          </div>
+          <div class="carousel__slide">
+            <div class="carousel__item">
+              <div class="carousel__product-image carousel__product-image--blue" aria-hidden="true"></div>
+              <h3>Saia plissada</h3>
+              <p class="carousel__size">Tamanho M</p>
+              <p class="carousel__price">R$ 59,90</p>
+              <button class="carousel__btn">Ver detalhes</button>
+            </div>
+          </div>
+          <div class="carousel__slide">
+            <div class="carousel__item">
+              <div class="carousel__product-image carousel__product-image--purple" aria-hidden="true"></div>
+              <h3>Blazer de alfaiataria</h3>
+              <p class="carousel__size">Tamanho 42</p>
+              <p class="carousel__price">R$ 119,90</p>
+              <button class="carousel__btn">Ver detalhes</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel__navigation">
+          <button class="carousel__nav-btn" onclick="document.querySelector('.carousel__viewport').scrollLeft -= 400">‹</button>
+          <button class="carousel__nav-btn" onclick="document.querySelector('.carousel__viewport').scrollLeft += 400">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="store-about" aria-label="descricao-loja">
+      <p>A RESTOK nasceu com o propósito de ser uma galeria para as roupas que estavam precisando de um novo lar. 
+        A dona desse site (eu, prazer!), Médica Veterinária e aventureira na área de programação, criou ele do zero com dois objetivos principais: 
+        vender peças pouco usadas, pra novos donos que dessem mais amor a elas, e praticar minhas habilidades de Desenvolvimento Web. Com essa apresentação rapidinha, só resta dizer:
+        entra, fica à vontade, a casa é sua! &#9825; </p>
+    </section>
+
+    <footer id="contato" class="site-footer">
+      <div class="site-footer-inner">
+        <h2>Contato</h2> 
+        <p>
+          Para dúvidas, sugestões ou parcerias, entre em contato através do
+          email: <a href="mailto:contato@rstk.com.br">contato@rstk.com.br</a>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
