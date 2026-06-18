@@ -4,6 +4,7 @@
 
 .store-about {
   display: flex;
+  flex-direction: column; 
   padding: 20px;
   background-color: rgba(244, 211, 94, 0.5);
   font-family: "Lilita One", cursive;

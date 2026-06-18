@@ -6,35 +6,8 @@
   box-sizing: border-box;
 }
 
-.product-header {
-  display: flex;
-  flex-direction: row;
-  align-content: space between;
-  gap: 20px; 
-  justify-content: center;
-}
 
-.icons-header {
-  display: flex;
-  flex-direction: row;
-  align-content: space between;
-  gap: 20px; 
-  justify-content: center;
-}
 
-.product-header h2 {
-  font-family: 'Lilita One', cursive;
-  font-size: 2.4rem;
-  margin-bottom: 6-px;
-  padding: 20px 20px 20px 20px;
-}
 
-.product-header #newstuff, #allstuff, #salestuff {
-  color: #E3170A;
-}
 
-.product-header #newstuff, #allstuff, #salestuff:hover {
-  cursor: pointer;
-  animation: pulse-grow var(--hover-duration, 0.5s) ease; 
-}
 
