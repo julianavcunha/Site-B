@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RESTOK</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/root.css" />
-    <link rel="stylesheet" href="css/header-nav.css" />
-    <!--<link rel="stylesheet" href="css/products.css" />-->
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="styles.css">
     <link rel="background" href="images/header-rstk.jpg" />
     <link rel="stylesheet" href="https://cloudflare.com"> <!--FONT AWESOME ICON-->
     <link rel="stylesheet" href="animate.min.css"> <!-- ANIMATION EFFECT -->
@@ -63,9 +59,13 @@
         </button></p>
         
     </header>
-      <div id="cssportal-grid">
-	<div id="div1"><img id="div1-img" src="/site/images/teste-roupa.webp"></div> 
-</div>
+      <section class="clothes-grid">
+  <div class="clothes-grid__item">
+    <img src="imagens/peca1.jpg" alt="Descrição da peça">
+    <span class="clothes-grid__caption">Vestido floral · P · R$ 45</span>
+  </div>
+  <!-- repita para cada peça -->
+</section>
 
     <!--<details id="about" class="store-about" aria-label="descricao-loja">
       <p>A RESTOK nasceu com o propósito de ser uma galeria para as roupas que estavam precisando de um novo lar. 
