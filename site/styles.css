@@ -123,45 +123,28 @@ body {
   z-index: 1000;
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  flex-direction: column; /* empilha: topo (logo + busca) e nav abaixo */
 }
 
+/* Linha de cima: logo à esquerda, busca à direita */
 .site-header-inner {
-  max-width: 1120px;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
-  gap: 0;
-  position: static;
-  height: auto;
-  padding: 5px;
-  align-items: flex-start;
-}
-
-.site-header p {
-  color: var(--color-secondary);
-  font-family: var(--font-family-body);
-  font-size: 1.2rem;
-  text-align: center;
-  align-content: left;
-  padding-top: 10px;
-  padding-right: 15px;
-  padding-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  gap: 16px;
 }
 
 .pagetitle {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex: 0;
   padding: 0;
-  margin-left: 10px;
-  margin-top: 5px;
 }
 
 .pagetitle h1 {
   font-family: var(--font-family-heading);
-  font-size: 60px;
+  font-size: 52px;
   letter-spacing: 6px;
   color: var(--color-secondary);
   line-height: 1;
@@ -173,11 +156,25 @@ body {
   animation: pulse-grow var(--hover-duration, 0.5s) ease;
 }
 
+/* Grupo de busca: texto + input + botão na mesma linha */
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-secondary);
+  font-family: var(--font-family-body);
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
 #search-input {
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-secondary);
   border-radius: 8px;
-  margin-top: 10px;
-  padding: 8px 15px 8px 8px;
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  background: var(--color-background);
+  color: var(--color-primary);
+  width: 180px;
 }
 
 /* Botão genérico */
@@ -238,10 +235,10 @@ body {
 }
 
 .gen-nav > ul {
-  display: flex;
+  display: flex;         /* sempre visível, sem hambúrguer */
   justify-content: center;
   flex: 1;
-  flex-wrap: wrap;
+  flex-wrap: wrap;       /* quebra linha se necessário em telas pequenas */
 }
 
 .gen-nav > ul > li {
@@ -303,30 +300,7 @@ body {
   color: var(--color-primary);
 }
 
-/* Hamburger */
-.gen-hamburger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  margin-left: auto;
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
 
-.gen-hamburger span {
-  display: block;
-  background: #ffffff;
-  transition: all 0.3s;
-  width: 18px;
-  height: 3px;
-  border-radius: 999px;
-}
-
-.gen-hamburger span + span {
-  margin-top: 3px;
-}
 
 
 /* ============================================================
@@ -625,44 +599,6 @@ body {
 /* ============================================================
    12. RESPONSIVO
    ============================================================ */
-
-@media (max-width: 768px) {
-  .gen-hamburger {
-    display: inline-flex;
-  }
-
-  .gen-nav > ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background: var(--color-primary);
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-    padding: 8px 0;
-  }
-
-  .gen-nav > ul.open {
-    display: flex;
-  }
-
-  .gen-nav > ul > li > a {
-    height: auto;
-    padding: 14px 20px;
-  }
-
-  .gen-nav > ul > li > ul {
-    position: static;
-    box-shadow: none;
-    background: rgba(0, 0, 0, 0.15);
-  }
-
-  .gen-nav > ul > li > ul.sub-open {
-    display: block;
-  }
-}
 
 @media (max-width: 480px) {
   .page-main {
