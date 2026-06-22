@@ -76,8 +76,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  padding-top: 120px; /* espaço para o header fixo */
-  border: 3px solid var(--color-border);
+  padding-top: 130px; /* espaço para o header fixo (logo ~76px + nav ~54px) */
 }
 
 /* Grid layout helper (style.css) */
@@ -139,7 +138,7 @@ body {
 .pagetitle {
   display: flex;
   align-items: center;
-  padding: 0;
+  padding: inherit;
 }
 
 .pagetitle h1 {
@@ -215,7 +214,6 @@ body {
   color: var(--color-primary);
   animation: pulse-grow var(--hover-duration, 0.5s) ease;
 }
-
 /* Navegação */
 .gen-nav {
   position: static;
@@ -224,10 +222,9 @@ body {
   background: var(--color-primary);
   min-height: 54px;
   box-shadow: none;
-  padding: 0 16px;
-  flex-wrap: wrap;
-  justify-content: center;
+  padding: 0 20px; /* mesmo padding lateral do site-header-inner */
   width: 100%;
+  box-sizing: border-box;
 }
 
 .gen-nav ul {
@@ -235,10 +232,10 @@ body {
 }
 
 .gen-nav > ul {
-  display: flex;         /* sempre visível, sem hambúrguer */
-  justify-content: center;
+  display: flex;
+  justify-content: flex-start; /* alinha os itens à esquerda, igual ao logo */
   flex: 1;
-  flex-wrap: wrap;       /* quebra linha se necessário em telas pequenas */
+  flex-wrap: wrap;
 }
 
 .gen-nav > ul > li {
@@ -593,6 +590,7 @@ body {
   0%, 100% { transform: scale(1); }
   50%       { transform: scale(1.1); }
 }
+
 
 
 
