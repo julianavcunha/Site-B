@@ -214,6 +214,7 @@ body {
   color: var(--color-primary);
   animation: pulse-grow var(--hover-duration, 0.5s) ease;
 }
+
 /* Navegação */
 .gen-nav {
   position: static;
@@ -452,12 +453,18 @@ body {
    8. GRID DE IMAGENS (brechó)
    ============================================================ */
 
+/* Wrapper: grid de roupas + sidebar sobre */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 240px; /* roupas ocupam o espaço, sobre fica fixo à direita */
+  align-items: start;
+  gap: 0;
+}
+
 .clothes-grid {
   display: grid;
-  /* Responsivo: colunas de no mínimo 260px, preenchendo o espaço disponível */
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 12px;
-  width: 100%;
   padding: 24px 16px;
 }
 
@@ -468,7 +475,6 @@ body {
   border: 1px solid var(--color-border-subtle);
   background: var(--color-background);
   cursor: pointer;
-  /* Proporção quadrada por padrão — troque por 4/3 ou 3/4 se preferir */
   aspect-ratio: 3 / 4;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -490,7 +496,6 @@ body {
   transform: scale(1.04);
 }
 
-/* Legenda opcional sobre a imagem */
 .clothes-grid__caption {
   position: absolute;
   bottom: 0;
@@ -511,32 +516,30 @@ body {
 
 
 /* ============================================================
-   9. SOBRE A LOJA (footer.css)
+   9. SOBRE A LOJA — sidebar direita
    ============================================================ */
 
 .store-about {
+  background-color: rgba(244, 211, 94, 0.5);
+  color: var(--color-primary);
+  font-family: var(--font-family-body);
+  font-size: 16px;
+  line-height: 1.7;
+  padding: 28px 20px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  background-color: rgba(244, 211, 94, 0.5);
-  font-family: var(--font-family-body);
-  color: var(--color-primary);
-  font-size: 18px;
-  font-weight: 200;
-  text-align: justify;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  margin-top: 200px;
-  padding-left: 20px;
-  padding-right: 20px;
-  line-height: 1.6;
+  gap: 16px;
+  /* cola no topo e acompanha o scroll */
+  position: sticky;
+  top: 130px; /* altura do header fixo */
+  align-self: start;
+  min-height: calc(100vh - 130px);
+  border-left: 2px solid rgba(244, 211, 94, 0.6);
 }
 
 .store-about p {
-  font-family: var(--font-family-body);
-  font-size: 18px;
-  text-align: justify;
+  font-size: 16px;
+  text-align: left;
 }
 
 
@@ -544,36 +547,10 @@ body {
    10. FOOTER (footer.css)
    ============================================================ */
 
-.site-footer {
-  background-color: var(--color-primary);
-  border-bottom: 1px solid var(--color-secondary);
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 0;
-  height: auto;
-}
-
-.site-footer-inner {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-primary);
-  font-family: var(--font-family-body);
-  line-height: 1.6;
-}
-
-.site-footer-inner p {
-  color: var(--color-secondary);
-  font-size: 30px;
-  margin-bottom: 0;
-}
-
 .fa-whatsapp,
 .fa-instagram {
   font-family: var(--font-family-body);
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 2px;
 }
 
@@ -590,7 +567,6 @@ body {
   0%, 100% { transform: scale(1); }
   50%       { transform: scale(1.1); }
 }
-
 
 
 
@@ -614,6 +590,18 @@ body {
 
   .product-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Em mobile: sidebar vai pra baixo do grid */
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .store-about {
+    position: static;
+    min-height: auto;
+    border-left: none;
+    border-top: 2px solid rgba(244, 211, 94, 0.6);
   }
 
   /* Grid de roupas: 2 colunas fixas em mobile */
